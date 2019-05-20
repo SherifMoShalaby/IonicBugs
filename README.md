@@ -1,7 +1,7 @@
 # IonicBugs
 Repository for ionic v4+ bugs
 
-**Instruction to get it worikng**
+**Instruction to get it working**
 1. clone the repository
 2. open folder using cmd or any editor like (visual studio code)
 3. write **npm install** command to get the node modules to be able to run the application
