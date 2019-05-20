@@ -8,7 +8,7 @@ Repository for ionic v4+ bugs
 4. write **ionic serve** to start the application
 
 
-
+**1-**
 **Instructions to get the Ion-Item-Sliding bug**
 1. run the application
 2. slide the item named 'list3' from the right to left and press the + icon button
@@ -17,3 +17,14 @@ Repository for ionic v4+ bugs
 
 **Expected behavior**
 - should be **slidable**
+
+
+**2-**
+**Instructions to get the ion-select bug**
+1. run the application
+2. press the ion-select component and choose two or more, then press the ok button
+3. the choosen items will not be reflected
+4. you have to opeh the ion-select one more time and choose the same selection before then press the ok
+
+**Expected behavior**
+- should be working from first selection without no problems
