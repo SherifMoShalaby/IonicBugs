@@ -11,7 +11,7 @@
     <ng-container *ngFor="let list of lists">
       <ion-item-sliding #itemSliding>
         <ion-item button="true" (click)="onClick(list)">
-          <ion-icon color="secondary" *ngIf="list.selected" slot="start" name="mark">
+          <ion-icon color="secondary" slot="start" name="mark">
           </ion-icon>
           <ion-label>
             <div>
@@ -28,5 +28,22 @@
         </ion-item-options>
       </ion-item-sliding>
     </ng-container>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">
+        <div class="lstn-subtitle1">
+          Title
+        </div>
+      </ion-label>
+
+      <ion-select [multiple]="true" placeholder="Title Place Holder" value="{{ ionSelectChoosenList }}"
+        (ionChange)="selectionChanged(ionSelectRef.value)" #ionSelectRef>
+        <ion-select-option *ngFor="let item of ionSelectBindList" value="{{ item }}">
+          {{ item }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
   </ion-list>
 </ion-content>

@@ -13,6 +13,9 @@ export class HomePage implements OnInit {
   pinnedListType = ListTypeEnum.PIN;
   regularListType = ListTypeEnum.REGULAR;
 
+  ionSelectBindList: string[] = [];
+  ionSelectChoosenList: string[] = [];
+
   ngOnInit() {
     const list1 = new List();
     list1.id = 1;
@@ -28,6 +31,12 @@ export class HomePage implements OnInit {
     list3.id = 3;
     list3.name = 'list3';
     this.lists.push(list3);
+
+
+    this.ionSelectBindList.push('1');
+    this.ionSelectBindList.push('2');
+    this.ionSelectBindList.push('3');
+    this.ionSelectBindList.push('4');
   }
 
   onClick(list: List) {
@@ -38,5 +47,14 @@ export class HomePage implements OnInit {
     itemSliding.close();
     this.lists.unshift(list);
     console.log('onAdd: ' + list);
+  }
+
+  /**
+  *
+  */
+  selectionChanged(eventValue) {
+    this.ionSelectChoosenList = [];
+    this.ionSelectChoosenList.push(eventValue);
+    console.log(eventValue);
   }
 }
